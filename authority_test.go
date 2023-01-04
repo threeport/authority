@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/harranali/authority"
 	"github.com/joho/godotenv"
-	"gorm.io/driver/mysql"
+	"github.com/threeport/authority"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
@@ -29,7 +29,7 @@ func TestMain(m *testing.M) {
 		dsn = "root:@tcp(127.0.0.1:3306)/db_test?charset=utf8mb4&parseTime=True&loc=Local"
 	}
 
-	db, _ = gorm.Open(mysql.Open(dsn), &gorm.Config{
+	db, _ = gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Silent),
 	})
 
