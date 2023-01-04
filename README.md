@@ -1,6 +1,7 @@
 # Authority
 
 [![Build Status](https://github.com/threeport/authority/actions/workflows/ci.yml/badge.svg)](https://github.com/threeport/authority/actions/workflows/ci.yml)
+
 Role Based Access Control (RBAC) Go package with database persistence 
 # Features
 - Create Roles
